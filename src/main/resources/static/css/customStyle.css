@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+
+body{
+			background-image: url('../image/bgImg3.jpg');
+			background-position:center;
+			background-size:cover;
+			background-attachment:fixed;
+			width:100%;
+			font-family:"times new roman";
+	}
+	
+	.navlist{
+	border-bottom:none;
+	font-size:14pt;
+	}
+	
+	.course-cards{
+		background-color:#eeffee;
+		width: 300px;
+		margin-left: -15px; 
+		margin-top: -15px;
+		border: 2pt solid whitesmoke;
+		border-radius:1.5rem;			
+		
+	}
+	
+	.course-cards:hover{
+	border:2pt solid gray;
+	}
+	
+	.instrucrion{
+		background: rgba(255,255,255,0.61);
+		border-radius:2rem;
+		padding:2%;
+								
+	}
+	
+								.company-main{
+								
+								
+										padding-left: 6%; 
+										padding-right: 6%; 
+										width: 100%; 
+										display: flex; 
+										text-align: center;
+										justify-content:space-evenly;
+								
+								}
+								
+								.company-sec1{
+									flex-grow: 1;
+									background: rgba(255,255,255,0.61);
+									border-radius:1rem;
+									padding:3%;
+									margin-right:6em;
+								
+								}
+								
+								
+								
+								
+								.company-sec1 h2{
+								color:#a22404;
+								}
+								.company-sec2 h2{
+								color:#a22404;
+								}
+								.company-sec2{
+									flex-grow: 1; 
+									background: rgba(255,255,255,0.4);
+									border-radius:1rem;
+								
+									}
+								
+								.company-sec2 a{
+								text-decoration:none;
+								
+								}
+								
+								.company-form{ 
+								flex-grow: 1;
+								font-weight:bold;
+													
+								}
+								
+								.company-form input{
+								opacity:.8;
+								}
+								.company-form input:hover{
+								opacity:1;
+								}
+								
+								.company-form button{
+									color:#ffffff;
+									padding:2%;
+									border:1pt solid #000000;
+									border-radius:2rem;
+									font-weight:bold;
+									background-color:#a22404;
+								}
+								
+								.company-form button:hover{
+								color:#a22404;
+								background-color:#ffffff;
+								}
+								
+									

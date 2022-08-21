@@ -218,14 +218,14 @@ public class StudentCourseService implements IStudentService {
 				}
 			} else if (placed.equalsIgnoreCase("true")) {
 				
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlaced(course, searchName, true);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlaced(compOptional.get().getHighestPackage(), course, searchName, true);
 				}
 
 			}else if (placed.equalsIgnoreCase("false")) {
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlaced(course, searchName, false);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlaced(compOptional.get().getHighestPackage(), course, searchName, false);
@@ -238,7 +238,7 @@ public class StudentCourseService implements IStudentService {
 
 			if (placed.equalsIgnoreCase("")) {
 
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 
 					students = stdRepo.findByCourseAndNameContainingOrderByName(course, searchName);
 				} else {
@@ -247,14 +247,14 @@ public class StudentCourseService implements IStudentService {
 				}
 			} else if (placed.equalsIgnoreCase("true")) {
 				
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlacedOrderByName(course, searchName, true);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlacedOrderByName(compOptional.get().getHighestPackage(), course, searchName, true);
 				}
 
 			}else if (placed.equalsIgnoreCase("false")) {
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlacedOrderByName(course, searchName, false);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlacedOrderByName(compOptional.get().getHighestPackage(), course, searchName, false);
@@ -270,7 +270,7 @@ public class StudentCourseService implements IStudentService {
 
 			if (placed.equalsIgnoreCase("")) {
 
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 
 					students = stdRepo.findByCourseAndNameContainingOrderById(course, searchName);
 				} else {
@@ -279,14 +279,14 @@ public class StudentCourseService implements IStudentService {
 				}
 			} else if (placed.equalsIgnoreCase("true")) {
 				
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlacedOrderById(course, searchName, true);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlacedOrderById(compOptional.get().getHighestPackage(), course, searchName, true);
 				}
 
 			}else if (placed.equalsIgnoreCase("false")) {
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlacedOrderById(course, searchName, false);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlacedOrderById(compOptional.get().getHighestPackage(), course, searchName, false);
@@ -300,7 +300,7 @@ public class StudentCourseService implements IStudentService {
 
 			if (placed.equalsIgnoreCase("")) {
 
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 
 					students = stdRepo.findByCourseAndNameContainingOrderByHighestPackageDesc(course, searchName);
 				} else {
@@ -309,14 +309,14 @@ public class StudentCourseService implements IStudentService {
 				}
 			} else if (placed.equalsIgnoreCase("true")) {
 				
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlacedOrderByHighestPackageDesc(course, searchName, true);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlacedOrderByHighestPackageDesc(compOptional.get().getHighestPackage(), course, searchName, true);
 				}
 
 			}else if (placed.equalsIgnoreCase("false")) {
-				if (compOptional.isEmpty()) {
+				if (!compOptional.isPresent()) {
 					students = stdRepo.findByCourseAndNameContainingAndPlacedOrderByHighestPackageDesc(course, searchName, false);
 				}else {
 					students = stdRepo.findByHighestPackageLessThanEqualAndCourseAndNameContainingAndPlacedOrderByHighestPackageDesc(compOptional.get().getHighestPackage(), course, searchName, false);

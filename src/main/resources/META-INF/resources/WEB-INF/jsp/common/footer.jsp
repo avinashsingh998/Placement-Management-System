@@ -54,7 +54,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    Contect Me :
+    Contact Me :
     <a class="text-white" href="mailto:avinashkumarsingh63908@gmail.com">Avinash Kumar Singh</a>
   </div>
   <!-- Copyright -->

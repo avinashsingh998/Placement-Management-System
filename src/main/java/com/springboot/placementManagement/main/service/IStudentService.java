@@ -21,6 +21,7 @@ public interface IStudentService {
 	public List<Student> getStudentbyNC(Course course, String name);
 	public List<Student> getStudentbyN(String name);
 	public Student getStudentById(String id);
+	public List<Student> getAllStudentByCompany(long cidl);
 	
 	
 	public List<Course> getAllCourses();

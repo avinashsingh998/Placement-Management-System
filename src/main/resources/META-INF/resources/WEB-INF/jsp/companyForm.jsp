@@ -10,17 +10,25 @@
 <head>
 <meta charset="ISO-8859-1">
 <script>
-			function deleteCompany(cId){
-				
-				var deleteCompany = confirm("Are you sure want to delete this company record?")
-				
-				if (deleteCompany) {
-					window.location.assign("${ctx}/companyD?cId=" + cId);
-				} else {
-					return;
-				}
-			}
-			
+function deleteCompany(cId){
+	
+	var deleteCompany = confirm("Are you sure want to delete this company record?")
+	
+	if (deleteCompany) {
+		window.location.assign("${ctx}/companyD?cId=" + cId);
+	} else {
+		return;
+	}
+}
+function companyDetails(cId){
+	
+	
+	
+	
+		window.location.assign("${ctx}/detailsOfCompany?cId=" + cId);
+	
+}
+
 
 </script>
 </head>
@@ -93,13 +101,17 @@
 
 						<c:forEach items="${companies}" var="comp">
 							<tr>
-								<td>${comp.name}</td>
+								
+								<td onclick="companyDetails(${comp.cId})" style="color:#000096; font-weight:bold;">${comp.name}</td>
+								
 								<td> <fmt:formatDate type = "date" value = "${comp.arrivalDate}" /></td>
 								<td>${comp.phoneNumber}<br> <a
 									href="mailto:${comp.emailId}">${comp.emailId} </a>
 								</td>
 								<td>${comp.highestPackage}</td>
 								<td>  <img src="image/cross.jpg" width="20" height="20" alt="Delete" onclick="deleteCompany(${comp.cId})">
+								
+								
 							</tr>
 						</c:forEach>
 

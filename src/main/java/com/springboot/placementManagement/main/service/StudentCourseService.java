@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -325,6 +326,12 @@ public class StudentCourseService implements IStudentService {
 
 		}
 
+		return students;
+	}
+
+	public List<Student> getAllStudentByCompany(long cidl) {
+		Company cmp = cRepo.findById(cidl).get();
+		List<Student> students = csRepo.findAll().stream().filter(cs -> cs.getCompany().equals(cmp)).map(p->p.getStudent()).collect(Collectors.toList());
 		return students;
 	}
 

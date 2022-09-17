@@ -27,8 +27,7 @@ public class Company {
 	
 	 
 	
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	List<CompanySalary> companySalary = new LinkedList<>();
+	
 
 	public Company() {
 		super();
@@ -36,15 +35,14 @@ public class Company {
 	}
 
 
-	public Company(String name, long phoneNumber, String emailId, Date arrivalDate, long highestPackage,
-			 List<CompanySalary> companySalary) {
+	public Company(String name, long phoneNumber, String emailId, Date arrivalDate, long highestPackage) {
 		super();
 		this.name = name;
 		this.phoneNumber = phoneNumber;
 		this.emailId = emailId;
 		this.arrivalDate = arrivalDate;
 		this.highestPackage = highestPackage;
-		this.companySalary = companySalary;
+		
 	}
 
 
@@ -109,14 +107,10 @@ public class Company {
 
 
 	
-	public List<CompanySalary> getCompanySalary() {
-		return companySalary;
-	}
+	
 
 
-	public void setCompanySalary(List<CompanySalary> companySalary) {
-		this.companySalary = companySalary;
-	}
+	
 
 
 	

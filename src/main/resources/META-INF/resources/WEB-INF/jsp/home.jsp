@@ -37,7 +37,8 @@
 					<input type="hidden" id="placed" name="placed" value="">
 					<button style="border: none; height:50px; width:250px; margin-left: 90px; margin-bottom: 90px; margin-top: 80px;"
 						type="submit">
-						<div  class = "course-cards col-6, shadow p-3 mb-5">
+						<div  class = "course-cards col-6, shadow mb-5">
+							<span class="cid"> ${course.courseId}</span> <br>
 							<strong>${course.name} </strong><br> Semester - ${course.semester}
 							<hr>
 							<p style="color: red;">${course.department}</p>

@@ -20,7 +20,18 @@ body{
 		margin-left: -15px; 
 		margin-top: -15px;
 		border: 2pt solid whitesmoke;
-		border-radius:1.5rem;			
+		border-radius:1.5rem;	
+		padding-left:5%;
+		padding-right:5%;
+		padding-bottom:5%;		
+		
+	}
+	
+	.cid{
+		color:#336600;
+		font-weight:bold;
+		font-size:10pt;
+		padding-right:80%
 		
 	}
 	
@@ -102,6 +113,15 @@ body{
 								.company-form button:hover{
 								color:#a22404;
 								background-color:#ffffff;
+								}
+								
+								.com-course{
+									background-color:whitesmoke;
+									border-radius:1rem;
+									color:#000093;
+									padding:3pt;
+								
+									
 								}
 								
 									
